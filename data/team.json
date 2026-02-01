@@ -1,0 +1,99 @@
+{
+  "coreTeam": [
+    {
+      "name": "Sarah Johnson",
+      "role": "President",
+      "image": "https://i.pravatar.cc/150?img=1"
+    },
+    {
+      "name": "Emily Chen",
+      "role": "Vice President",
+      "image": "https://i.pravatar.cc/150?img=5"
+    },
+    {
+      "name": "Priya Sharma",
+      "role": "Technical Lead",
+      "image": "https://i.pravatar.cc/150?img=9"
+    },
+    {
+      "name": "Maya Patel",
+      "role": "Events Coordinator",
+      "image": "https://i.pravatar.cc/150?img=10"
+    },
+    {
+      "name": "Aisha Khan",
+      "role": "Community Manager",
+      "image": "https://i.pravatar.cc/150?img=16"
+    },
+    {
+      "name": "Sophia Rodriguez",
+      "role": "Marketing Head",
+      "image": "https://i.pravatar.cc/150?img=20"
+    }
+  ],
+  "advisoryCouncil": [
+    {
+      "name": "Dr. Jennifer Williams",
+      "role": "Faculty Advisor",
+      "image": "https://i.pravatar.cc/150?img=25"
+    },
+    {
+      "name": "Prof. Anita Desai",
+      "role": "Research Advisor",
+      "image": "https://i.pravatar.cc/150?img=26"
+    },
+    {
+      "name": "Dr. Rachel Green",
+      "role": "Industry Mentor",
+      "image": "https://i.pravatar.cc/150?img=28"
+    }
+  ],
+  "clubMembers": [
+    {
+      "name": "Zara Ahmed",
+      "image": "https://i.pravatar.cc/150?img=30"
+    },
+    {
+      "name": "Lily Thompson",
+      "image": "https://i.pravatar.cc/150?img=32"
+    },
+    {
+      "name": "Mia Martinez",
+      "image": "https://i.pravatar.cc/150?img=35"
+    },
+    {
+      "name": "Olivia Brown",
+      "image": "https://i.pravatar.cc/150?img=38"
+    },
+    {
+      "name": "Ava Wilson",
+      "image": "https://i.pravatar.cc/150?img=40"
+    },
+    {
+      "name": "Isabella Davis",
+      "image": "https://i.pravatar.cc/150?img=41"
+    }
+  ],
+  "programTeam": [
+    {
+      "name": "Hannah Lee",
+      "role": "Workshop Coordinator",
+      "image": "https://i.pravatar.cc/150?img=45"
+    },
+    {
+      "name": "Grace Kim",
+      "role": "Outreach Lead",
+      "image": "https://i.pravatar.cc/150?img=47"
+    },
+    {
+      "name": "Chloe Wang",
+      "role": "Content Creator",
+      "image": "https://i.pravatar.cc/150?img=48"
+    },
+    {
+      "name": "Natalie Singh",
+      "role": "Social Media Manager",
+      "image": "https://i.pravatar.cc/150?img=49"
+    }
+  ]
+}
