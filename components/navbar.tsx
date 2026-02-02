@@ -125,7 +125,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <Link href="/" className="transform-gpu will-change-transform">
             <Image
-              src="/logo.png"
+              src="/gwist-club/logo.png"
               alt="GWiST - Girls and Women in STEM"
               width={isMobile ? 120 : scrolled ? 140 : 180}
               height={isMobile ? 40 : scrolled ? 46 : 60}
