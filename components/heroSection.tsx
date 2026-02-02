@@ -78,7 +78,7 @@ const HeroSection = () => {
             <div className="relative">
               <div className="bg-white p-10 rounded-3xl shadow-2xl">
                 <Image
-                  src="/hero.png"
+                  src="/gwist-club/hero.png"
                   alt="GWiST - Girls and Women in STEM"
                   width={320}
                   height={320}
