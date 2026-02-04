@@ -1,0 +1,154 @@
+{
+  "coreTeam": [
+    {
+      "name": "Mishika Sood",
+      "role": "President",
+      "image": "https://i.pravatar.cc/150?img=1"
+    },
+    {
+      "name": "Tisha Bhavsar",
+      "role": "Core Member",
+      "image": "https://i.pravatar.cc/150?img=5"
+    },
+    {
+      "name": "Malini Sen",
+      "role": "Core Member",
+      "image": "https://i.pravatar.cc/150?img=9"
+    },
+    {
+      "name": "Ananya Ramesh",
+      "role": "Core Member",
+      "image": "https://i.pravatar.cc/150?img=10"
+    }
+    
+  ],
+
+  "advisoryCouncil": [
+    {
+      "name": "Dr. Jennifer Williams",
+      "role": "Faculty Advisor",
+      "image": "https://i.pravatar.cc/150?img=25"
+    },
+    {
+      "name": "Prof. Anita Desai",
+      "role": "Research Advisor",
+      "image": "https://i.pravatar.cc/150?img=26"
+    },
+    {
+      "name": "Dr. Rachel Green",
+      "role": "Industry Mentor",
+      "image": "https://i.pravatar.cc/150?img=28"
+    }
+  ],
+
+
+  "designTeam": [
+    {
+      "name": "Sara Hanspal",
+      "image": "https://i.pravatar.cc/150?img=25"
+    },
+    {
+      "name": "Argh Jain",
+      "image": "https://i.pravatar.cc/150?img=26"
+    },
+    {
+      "name": "Shlok Gupta",
+      "image": "https://i.pravatar.cc/150?img=28"
+    },
+    {
+      "name": "Keerthana",
+      "image": "https://i.pravatar.cc/150?img=28"
+    },
+    {
+      "name": "Renaya Gupta",
+      "image": "https://i.pravatar.cc/150?img=28"
+    },
+    {
+      "name": "Avneet Kaur",
+      "image": "https://i.pravatar.cc/150?img=28"
+    },
+    {
+      "name": "Ananya Singlla",
+      "image": "https://i.pravatar.cc/150?img=28"
+    }, 
+    {
+      "name": "Tanvi Reddy",
+      "image": "https://i.pravatar.cc/150?img=28"
+    }
+  ],
+
+
+  "clubMembers": [
+    {
+      "name": "Akanksha",
+      "image": "https://i.pravatar.cc/150?img=25"
+    },
+    {
+      "name": "Anjelica",
+      "image": "https://i.pravatar.cc/150?img=26"
+    },
+    {
+      "name": "Akash ",
+      "image": "https://i.pravatar.cc/150?img=28"
+    },
+    {
+      "name": "Abhineet",
+      "image": "https://i.pravatar.cc/150?img=28"
+    },
+    {
+      "name": "Advika",
+      "image": "https://i.pravatar.cc/150?img=28"
+    },
+    {
+      "name": "Ananya ",
+      "image": "https://i.pravatar.cc/150?img=28"
+    },
+    {
+      "name": "Dipti",
+      "image": "https://i.pravatar.cc/150?img=28"
+    },
+    {
+      "name": "Ishita",
+      "image": "https://i.pravatar.cc/150?img=28"
+    },
+    {
+      "name": "Lakshay",
+      "image": "https://i.pravatar.cc/150?img=28"
+    },
+    {
+      "name": "Manavi",
+      "image": "https://i.pravatar.cc/150?img=28"
+    },
+    {
+      "name": "Nandini",
+      "image": "https://i.pravatar.cc/150?img=28"
+    },
+    {
+      "name": "Preesha",
+      "image": "https://i.pravatar.cc/150?img=28"
+    },
+    {
+      "name": "Samikaa",
+      "image": "https://i.pravatar.cc/150?img=28"
+    },
+    {
+      "name": "Samayaka",
+      "image": "https://i.pravatar.cc/150?img=28"
+    },
+    {
+      "name": "Suchetan",
+      "image": "https://i.pravatar.cc/150?img=28"
+    },
+    {
+      "name": "Tannishtha",
+      "image": "https://i.pravatar.cc/150?img=28"
+    },
+    {
+      "name": "Tashvi",
+      "image": "https://i.pravatar.cc/150?img=28"
+    }
+
+]
+}
+
+  
