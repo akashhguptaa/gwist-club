@@ -105,43 +105,56 @@ const Navbar = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transform-gpu will-change-transform ${
         isMobile
-          ? "py-2 bg-gray-900 border-b border-gray-800"
-          : `transition-all duration-500 ease-in-out ${
+          ? "py-2 bg-gray-900 border-b border-gray-300"
+          : `transition-all duration-700 ease-in-out ${
               scrolled
-                ? "py-2 backdrop-blur-lg bg-gray-400/20 mt-2 border border-gray-800 mx-60 3xl:mx-96 rounded-full shadow-lg shadow-cyan-900/20"
+                ? "py-3 backdrop-blur-lg bg-gray-400/10 mt-3 border border-gray-400 mx-60 3xl:mx-[20rem] rounded-full shadow-lg shadow-cyan-900/20"
                 : "py-4 bg-transparent border-transparent"
             }`
       }`}
     >
       <div
-        className={`container mx-auto px-4 transform-gpu will-change-transform ${
+        className={`container mx-auto px-8 transform-gpu will-change-transform ${
           isMobile
             ? "max-w-full"
-            : `transition-all duration-500 ease-in-out ${
-                scrolled ? "max-w-3xl 3xl:max-w-5xl" : "max-w-6xl 3xl:max-w-7xl"
+            : `transition-all duration-700 ease-in-out ${
+                scrolled ? "max-w-xl 3xl:max-w-3xl" : "max-w-6xl 3xl:max-w-7xl"
               }`
         }`}
       >
-        <div className="flex items-center justify-between">
-          <Link href="/" className="transform-gpu will-change-transform">
-            <Image
-              src="/logo.png"
-              alt="GWiST - Girls and Women in STEM"
-              width={isMobile ? 120 : scrolled ? 140 : 180}
-              height={isMobile ? 40 : scrolled ? 46 : 60}
-              className={`h-auto transition-all duration-500 ease-in-out ${
-                isMobile ? "w-[120px]" : scrolled ? "w-[140px]" : "w-[180px]"
-              }`}
-              priority
-            />
-          </Link>
+        <div className="flex items-center justify-center">
+          {/* Empty space for the moving logo from hero section */}
+          <div className="absolute left-8 transform-gpu will-change-transform">
+            {isMobile && (
+              <Link href="/">
+                <Image
+                  src="/logo.png"
+                  alt="GWiST - Girls and Women in STEM"
+                  width={120}
+                  height={40}
+                  className="w-[120px] h-auto"
+                  priority
+                />
+              </Link>
+            )}
+            {/* Desktop logo space is reserved for the hero logo that moves here */}
+            {!isMobile && (
+              <div
+                style={{
+                  width: scrolled ? "180px" : "0px",
+                  height: scrolled ? "60px" : "0px",
+                }}
+                className="transition-all duration-700 ease-in-out"
+              />
+            )}
+          </div>
 
           {isMobile ? (
             <>
               <button
                 onClick={toggleMobileMenu}
                 aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-                className="p-2 hover:bg-gray-800 rounded-md transition-colors transform-gpu will-change-transform"
+                className="absolute right-8 p-2 hover:bg-gray-800 rounded-md transition-colors transform-gpu will-change-transform"
               >
                 {mobileMenuOpen ? (
                   <X className="h-6 w-6" />
@@ -151,13 +164,13 @@ const Navbar = () => {
               </button>
 
               {mobileMenuOpen && (
-                <div className="absolute top-full left-0 right-0 bg-gray-900 py-4 px-4 border-b border-gray-800 transform-gpu will-change-transform">
+                <div className="absolute top-full left-0 right-0 bg-[#faf7d0] py-4 px-4 border-b border-gray-300 transform-gpu will-change-transform">
                   <nav className="flex flex-col space-y-4">
                     {navLinks.map((link) => (
                       <Link
                         key={link.name}
                         href={link.href}
-                        className="text-gray-800 hover:text-teal-700 py-2 transform-gpu will-change-transform"
+                        className="text-gray-700 hover:text-teal-700 py-2 transform-gpu will-change-transform"
                         onClick={closeMobileMenu}
                       >
                         {link.name}
@@ -173,7 +186,7 @@ const Navbar = () => {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`text-gray-600 hover:text-teal-700 transition-all duration-500 ease-in-out transform-gpu will-change-transform ${
+                  className={`text-gray-600 hover:text-teal-700 transition-all duration-700 ease-in-out transform-gpu will-change-transform ${
                     scrolled ? "text-sm 3xl:text-lg" : "text-base 3xl:text-xl"
                   }`}
                 >

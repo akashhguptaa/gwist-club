@@ -1,8 +1,90 @@
+"use client";
+
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 const HeroSection = () => {
+  const logoRef = useRef<HTMLDivElement>(null);
+  const logoContainerRef = useRef<HTMLDivElement>(null);
+  const taglineRef = useRef<HTMLParagraphElement>(null);
+  const rafRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    let initialLogoRect: DOMRect | null = null;
+
+    const updateLogoPosition = () => {
+      if (!logoRef.current || !logoContainerRef.current || !taglineRef.current)
+        return;
+
+      const scrollY = window.scrollY;
+      const startScroll = 50;
+      const endScroll = 300;
+
+      // Store initial position on first render
+      if (!initialLogoRect && scrollY < startScroll) {
+        initialLogoRect = logoContainerRef.current.getBoundingClientRect();
+      }
+
+      if (scrollY >= startScroll && initialLogoRect) {
+        const progress = Math.min(
+          (scrollY - startScroll) / (endScroll - startScroll),
+          1,
+        );
+        const easeProgress = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+
+        // Target position (navbar)
+        const targetTop = 16;
+        const targetLeft = 64;
+        const targetScale = 0.32;
+
+        // Calculate movement
+        const currentRect = logoContainerRef.current.getBoundingClientRect();
+        const translateY = targetTop - currentRect.top;
+        const translateX = targetLeft - currentRect.left;
+        const scale = 1 - easeProgress * (1 - targetScale);
+
+        // Apply smooth transforms
+        logoRef.current.style.transform = `translate(${translateX * easeProgress}px, ${translateY * easeProgress}px) scale(${scale})`;
+        logoRef.current.style.zIndex = "60";
+        logoRef.current.style.position = "relative";
+
+        // Fade out tagline
+        taglineRef.current.style.opacity = `${Math.max(0, 1 - easeProgress * 2)}`;
+      } else if (scrollY < startScroll) {
+        // Reset
+        logoRef.current.style.transform = "translate(0, 0) scale(1)";
+        logoRef.current.style.zIndex = "10";
+        taglineRef.current.style.opacity = "1";
+      }
+    };
+
+    const handleScroll = () => {
+      if (rafRef.current) {
+        cancelAnimationFrame(rafRef.current);
+      }
+      rafRef.current = requestAnimationFrame(updateLogoPosition);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener(
+      "resize",
+      () => {
+        initialLogoRect = null;
+      },
+      { passive: true },
+    );
+    updateLogoPosition();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (rafRef.current) {
+        cancelAnimationFrame(rafRef.current);
+      }
+    };
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center bg-[#f5f1eb] overflow-hidden">
       {/* Decorative Elements */}
@@ -22,7 +104,7 @@ const HeroSection = () => {
           cy="200"
           r="180"
           fill="none"
-          stroke="#2E3538"
+          stroke="#136263"
           strokeWidth="1"
           opacity="0.15"
         />
@@ -31,7 +113,7 @@ const HeroSection = () => {
           cy="200"
           r="150"
           fill="none"
-          stroke="#2E3538"
+          stroke="#136263"
           strokeWidth="1.5"
           opacity="0.2"
         />
@@ -47,7 +129,7 @@ const HeroSection = () => {
           cy="200"
           r="190"
           fill="none"
-          stroke="#2E3538"
+          stroke="#136263"
           strokeWidth="1"
           opacity="0.12"
         />
@@ -56,7 +138,7 @@ const HeroSection = () => {
           cy="200"
           r="160"
           fill="none"
-          stroke="#2E3538"
+          stroke="#136263"
           strokeWidth="1.5"
           opacity="0.18"
         />
@@ -65,7 +147,7 @@ const HeroSection = () => {
           cy="200"
           r="130"
           fill="none"
-          stroke="#2E3538"
+          stroke="#136263"
           strokeWidth="1"
           opacity="0.15"
         />
@@ -74,18 +156,35 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Logo Section */}
-          <div className="flex justify-center lg:justify-start mt-20">
-            <div className="relative">
-              <div className="bg-white p-10 rounded-3xl shadow-2xl">
-                <Image
-                  src="/hero.png"
-                  alt="GWiST - Girls and Women in STEM"
-                  width={320}
-                  height={320}
-                  className="w-64 md:w-80 h-auto"
-                  priority
-                />
-              </div>
+          <div
+            className="flex justify-center lg:justify-start mt-20"
+            ref={logoContainerRef}
+          >
+            <div
+              ref={logoRef}
+              style={{
+                willChange: "transform",
+                transformOrigin: "left top",
+              }}
+            >
+              <Image
+                src="/logo.png"
+                alt="GWiST - Girls and Women in STEM"
+                width={520}
+                height={420}
+                className="w-96 md:w-[28rem] lg:w-[32rem] h-auto"
+                priority
+              />
+              <p
+                ref={taglineRef}
+                className="text-center mt-6 text-lg md:text-xl text-gray-600"
+                style={{
+                  willChange: "opacity",
+                  transition: "opacity 0.2s ease-out",
+                }}
+              >
+                Empowering Women Through STEM@Plaksha
+              </p>
             </div>
           </div>
 
