@@ -1,88 +1,120 @@
-import React from 'react';
+"use client";
+
+import Footer from "@/components/footer";
+import { ChevronRight } from "lucide-react";
+import React from "react";
+import researchProjects from "@/data/research-data.json";
 
 export default function ResearchPage() {
     return (
-        <div className="min-h-screen bg-gray-50 py-12">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-12">
-                    <h1 className="text-4xl font-bold text-gray-900 mb-4">
-                        Research & Development
-                    </h1>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Exploring cutting-edge technologies and innovative solutions to drive the future forward.
-                    </p>
+        <div className="min-h-screen bg-[#f5f1eb]">
+            {/* Research Projects Section */}
+            <section className="py-40 relative overflow-hidden">
+                {/* Ambient background - improved blending at top */}
+                <div className="absolute inset-0 pointer-events-none">
+                    <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-[#0d6d6e] opacity-10 rounded-full blur-[100px] animate-pulse" />
                 </div>
+                
+                <div className="container mx-auto px-6 max-w-6xl relative z-10">
+                    {/* Header */}
+                    <div className="text-center mb-36">
+                        <h2 className="font-serif text-5xl md:text-6xl font-light text-[#2E3538] mb-8 leading-tight">
+                            Research that
+                            <span className="italic text-[#0d6d6e]"> empowers</span>,
+                            <br />
+                            innovation that
+                            <span className="italic text-[#D6C3A9]"> transforms</span>
+                        </h2>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                    <div className="bg-white rounded-lg shadow-md p-6">
-                        <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                            Artificial Intelligence
-                        </h3>
-                        <p className="text-gray-600 mb-4">
-                            Advancing AI capabilities through machine learning, natural language processing, and computer vision research.
+                        <p className="text-xl text-gray-600 max-w-2xl mx-auto font-light leading-relaxed">
+                            Explore our ongoing research initiatives designed to break barriers
+                            and create opportunities for women in technology
                         </p>
-                        <span className="inline-block bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">
-                            Active Research
-                        </span>
                     </div>
 
-                    <div className="bg-white rounded-lg shadow-md p-6">
-                        <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                            Quantum Computing
-                        </h3>
-                        <p className="text-gray-600 mb-4">
-                            Exploring quantum algorithms and their applications in cryptography and optimization problems.
-                        </p>
-                        <span className="inline-block bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">
-                            Experimental
-                        </span>
-                    </div>
+                    {/* Research Timeline */}
+                    <div className="space-y-48">
+                        {researchProjects.map((project, index) => {
+                            // Alternate layout: even indices have image on right, odd on left
+                            const imageOnLeft = index % 2 === 1;
 
-                    <div className="bg-white rounded-lg shadow-md p-6">
-                        <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                            Sustainable Technology
-                        </h3>
-                        <p className="text-gray-600 mb-4">
-                            Developing eco-friendly solutions and renewable energy technologies for a sustainable future.
-                        </p>
-                        <span className="inline-block bg-yellow-100 text-yellow-800 text-sm px-3 py-1 rounded-full">
-                            In Development
-                        </span>
+                            return (
+                                <div 
+                                    key={project.id}
+                                    className="grid md:grid-cols-2 gap-20 items-center"
+                                >
+                                    {/* Image - Left side for odd indices */}
+                                    {imageOnLeft && (
+                                        <div className="relative order-2 md:order-1">
+                                            <ImageVisual 
+                                                imageUrl={project.imageUrl}
+                                                alt={project.title}
+                                            />
+                                        </div>
+                                    )}
+
+                                    {/* Text Content */}
+                                    <div className={imageOnLeft ? 'order-1 md:order-2' : ''}>
+                                        <span className="text-sm tracking-widest uppercase text-[#0d6d6e] font-medium mb-4 block">
+                                            {project.category}
+                                        </span>
+
+                                        <h3 className="group relative inline-block font-serif text-4xl font-semibold text-[#2E3538] mb-8 leading-snug">
+                                            {project.title}
+                                        </h3>
+
+                                        <p className="text-lg text-gray-600 leading-relaxed mb-8 max-w-md">
+                                            {project.description}
+                                        </p>
+
+                                        <div className="space-y-2 text-sm text-gray-500 mb-8">
+                                            {project.features.map((feature, idx) => (
+                                                <p key={idx} className="italic">{feature}</p>
+                                            ))}
+                                        </div>
+
+                                        <a 
+                                            href={project.link}
+                                            className="group inline-flex items-center gap-2 text-[#0d6d6e] hover:text-[#2E3538] font-semibold transition-colors duration-300"
+                                        >
+                                            <span className="relative">
+                                                Explore Project
+                                                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-[#0d6d6e] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                                            </span>
+                                            <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                        </a>
+                                    </div>
+
+                                    {/* Image - Right side for even indices */}
+                                    {!imageOnLeft && (
+                                        <div className="relative">
+                                            <ImageVisual 
+                                                imageUrl={project.imageUrl}
+                                                alt={project.title}
+                                            />
+                                        </div>
+                                    )}
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
+            </section>
 
-                <div className="bg-white rounded-lg shadow-md p-8">
-                    <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                        Latest Publications
-                    </h2>
-                    <div className="space-y-4">
-                        <div className="border-l-4 border-blue-500 pl-4">
-                            <h4 className="text-lg font-semibold text-gray-900">
-                                Advanced Neural Network Architectures for Real-time Processing
-                            </h4>
-                            <p className="text-gray-600 text-sm">
-                                Published in International Journal of AI Research • 2024
-                            </p>
-                        </div>
-                        <div className="border-l-4 border-green-500 pl-4">
-                            <h4 className="text-lg font-semibold text-gray-900">
-                                Quantum-Classical Hybrid Algorithms for Optimization
-                            </h4>
-                            <p className="text-gray-600 text-sm">
-                                Presented at Quantum Computing Conference • 2024
-                            </p>
-                        </div>
-                        <div className="border-l-4 border-yellow-500 pl-4">
-                            <h4 className="text-lg font-semibold text-gray-900">
-                                Energy-Efficient Computing Systems for IoT Applications
-                            </h4>
-                            <p className="text-gray-600 text-sm">
-                                IEEE Transactions on Sustainable Computing • 2023
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <Footer />
+        </div>
+    );
+}
+
+// Component for image-based visuals
+function ImageVisual({ imageUrl, alt }: { imageUrl: string; alt: string }) {
+    return (
+        <div className="relative w-full h-[340px] rounded-[2rem] overflow-hidden shadow-xl">
+            <img 
+                src={imageUrl}
+                alt={alt}
+                className="w-full h-full object-cover"
+            />
         </div>
     );
 }
