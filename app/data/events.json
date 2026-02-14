@@ -1,0 +1,143 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "title": "Chatbot Workshop for School Students",
+      "date": "Jan 10, 2026",
+      "time": "11:00 AM - 1:00 PM",
+      "location": "Lab 1, Plaksha University",
+      "description": "A hands-on workshop introducing school students to chatbot development. Participants learned to build simple chatbots and explored the basics of conversational AI.",
+      "category": "workshop",
+      "highlight": true,
+      "imagePath": "chatbot_workshop.jpg",
+      "registrationLink": "/register/chatbot-workshop",
+      "detailPage": {
+        "overview": "This workshop introduced school students to the world of chatbots and conversational AI. Through interactive sessions and hands-on activities, participants learned how chatbots work, built their own simple bots, and explored real-world applications in education and business.",
+        "highlights": [
+          "Introduction to conversational AI",
+          "Building a basic chatbot from scratch",
+          "Live demo and Q&A with AI experts"
+        ],
+        "timeline": "Jan 10, 2026",
+        "team": "GWIST Team & School Mentors",
+        "status": "Completed"
+      }
+    },
+    {
+      "id": 2,
+      "title": "OpenAI API Workshop for Plaksha Students",
+      "date": "Jan 20, 2026",
+      "time": "5:00 PM - 7:00 PM",
+      "location": "1002, Bharti Block, Plaksha University",
+      "description": "A workshop on the basics of working with the OpenAI API, followed by a competition. Teams built GPT-powered games and the best game won cash prizes.",
+      "category": "workshop",
+      "highlight": true,
+      "imagePath": "openai_api_workshop.jpg",
+      "registrationLink": "/register/openai-workshop",
+      "detailPage": {
+        "overview": "A deep dive into the OpenAI API for Plaksha students. The event included a technical walkthrough, hands-on coding, and a game development competition using GPT models. Winners received cash prizes and certificates.",
+        "highlights": [
+          "OpenAI API basics and authentication",
+          "Building GPT-powered games",
+          "Team competition and awards"
+        ],
+        "timeline": "Jan 20, 2026",
+        "team": "GWIST & Plaksha AI Club",
+        "status": "Completed"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Streamlit Computer Vision Workshop",
+      "date": "Feb 19, 2026",
+      "time": "6:00 PM - 8:00 PM",
+      "location": "1002, Plaksha University",
+      "description": "A practical workshop on building computer vision models and deploying them with Streamlit and Roboflow. Participants created their own object detection apps.",
+      "category": "workshop",
+      "highlight": true,
+      "imagePath": "streamlit_workshop.jpg",
+      "registrationLink": "/register/streamlit-cv",
+      "detailPage": {
+        "overview": "Participants learned to build and deploy computer vision models using Streamlit and Roboflow. The workshop covered data collection, model training, and app deployment, culminating in a showcase of student-built object detection apps.",
+        "highlights": [
+          "Streamlit app basics",
+          "Using Roboflow for dataset management",
+          "Deploying computer vision models"
+        ],
+        "timeline": "Feb 19, 2026",
+        "team": "GWIST & Hack Plaksha",
+        "status": "Completed"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Prompt Engineering Workshop",
+      "date": "Feb 25, 2026",
+      "time": "4:00 PM - 6:00 PM",
+      "location": "Lab 2, Plaksha University",
+      "description": "Dive into the art and science of prompt engineering. Learn how to craft effective prompts for large language models and improve your AI project outcomes.",
+      "category": "workshop",
+      "highlight": true,
+      "imagePath": "prompt_engineering.jpg",
+      "registrationLink": "/register/prompt-engineering",
+      "detailPage": {
+        "overview": "This hands-on session focused on prompt engineering for large language models. Attendees learned how to design effective prompts, experiment with different strategies, and optimize outputs for real-world applications.",
+        "highlights": [
+          "Prompt design principles",
+          "Live prompt engineering demos",
+          "Best practices for LLMs"
+        ],
+        "timeline": "Feb 25, 2026",
+        "team": "GWIST AI Team",
+        "status": "Completed"
+      }
+    },
+    
+    {
+      "id": 5,
+      "title": "AI for Social Good",
+      "date": "Mar 12, 2026",
+      "time": "3:00 PM - 5:00 PM",
+      "location": "Innovation Lab, Plaksha University",
+      "description": "Discover how artificial intelligence is being used to address social challenges. Hear from experts and participate in hands-on activities to learn more about AI for good.",
+      "category": "workshop",
+      "highlight": false,
+      "imagePath": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop",
+      "registrationLink": "/register/ai-social-good",
+      "detailPage": {
+        "overview": "A showcase of how AI is being used to address social and environmental challenges. The event featured expert talks, project demos, and a collaborative ideation session for new AI4Good initiatives.",
+        "highlights": [
+          "Talks by AI for Good leaders",
+          "Project showcase",
+          "Group ideation session"
+        ],
+        "timeline": "Mar 12, 2026",
+        "team": "GWIST & Innovation Lab",
+        "status": "Completed"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Panel: Data Science in Climate Action",
+      "date": "Mar 20, 2026",
+      "time": "6:00 PM - 7:30 PM",
+      "location": "Virtual",
+      "description": "Exploring how women are leading the charge in using Big Data to solve environmental challenges. Featuring guest speakers from UN Women in Tech.",
+      "category": "talk",
+      "highlight": false,
+      "imagePath": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+      "registrationLink": "/register/climate-ds-panel",
+      "detailPage": {
+        "overview": "A panel discussion on the role of data science in climate action, featuring women leaders from academia, industry, and NGOs. The session included case studies, open Q&A, and networking opportunities.",
+        "highlights": [
+          "Panel with UN Women in Tech",
+          "Case studies in climate data",
+          "Audience Q&A and networking"
+        ],
+        "timeline": "Mar 20, 2026",
+        "team": "GWIST & Guest Panelists",
+        "status": "Completed"
+      }
+    }
+  ]
+}

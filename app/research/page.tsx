@@ -1,9 +1,9 @@
 "use client";
 
-import Footer from "@/components/footer";
+import Footer from "../components/footer";
 import { ChevronRight } from "lucide-react";
 import React from "react";
-import researchProjects from "@/data/research-data.json";
+import researchProjects from "../data/research-data.json";
 
 export default function ResearchPage() {
     return (

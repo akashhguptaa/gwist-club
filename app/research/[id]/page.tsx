@@ -1,4 +1,4 @@
-import researchProjects from "@/data/research-data.json";
+import researchProjects from "../../data/research-data.json";
 import Link from "next/link";
 import ProjectDetailClient from "./ProjectDetailClient";
 

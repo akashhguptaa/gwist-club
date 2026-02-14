@@ -11,7 +11,7 @@ const Footer = () => {
           <div>
             <div className="mb-4">
               <Image
-                src="/gwist-club/logo.png"
+                src="/logo.png"
                 alt="GWiST Logo"
                 width={120}
                 height={40}
@@ -70,11 +70,11 @@ const Footer = () => {
               <h3 className="text-white text-lg font-semibold mb-4">Connect</h3>
               <div className="space-y-4">
                 <a
-                  href="mailto:gwist@plaksha.edu.in"
+                  href="mailto:womeninstem@plaksha.edu.in"
                   className="flex items-center gap-2 text-[#D6C3A9] hover:text-white transition-colors"
                 >
                   <Mail size={20} />
-                  <span>gwist@plaksha.edu.in</span>
+                  <span>womeninstem@plaksha.edu.in</span>
                 </a>
                 <div className="flex gap-4 mt-4">
                   <a

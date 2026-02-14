@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "../../components/navbar";
-import Footer from "@/components/footer";
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 import Image from "next/image";
-import teamData from "@/data/final_team.json"; // Updated to your new file
+import teamData from "../data/final_team.json";
 
 const AboutPage = () => {
     return (
@@ -32,9 +32,9 @@ const AboutPage = () => {
             </section>
 
             {/* Organizational Structure */}
-            <section className="py-20 bg-[#2E3538]">
+            <section className="py-20 bg-white">
                 <div className="container mx-auto px-6">
-                    <h2 className="font-serif text-4xl md:text-5xl font-light text-center mb-16 text-white">
+                    <h2 className="font-serif text-4xl md:text-5xl font-light text-center mb-16 text-gray-900">
                         Organizational Structure
                     </h2>
 
@@ -45,10 +45,10 @@ const AboutPage = () => {
                                 Core Team
                             </h3>
                         </div>
-                        <p className="text-center text-gray-300 mb-8">
+                        <p className="text-center text-gray-600 mb-8">
                             4 Core Members providing direction to the club
                         </p>
-                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 justify-center">
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 justify-center">
                             {teamData.coreTeam.map((member, index) => (
                                 <div key={index} className="flex flex-col items-center text-center">
                                     <div className="relative w-32 h-32 mb-4">
@@ -59,8 +59,8 @@ const AboutPage = () => {
                                             className="rounded-full object-cover border-4 border-[#0d6d6e]"
                                         />
                                     </div>
-                                    <h4 className="font-semibold text-white mb-1">{member.name}</h4>
-                                    <p className="text-sm text-gray-400">{member.role}</p>
+                                    <h4 className="font-semibold text-gray-900 mb-1">{member.name}</h4>
+                                    <p className="text-sm text-gray-500">{member.role}</p>
                                 </div>
                             ))}
                         </div>
@@ -74,7 +74,7 @@ const AboutPage = () => {
                                     Advisory Council
                                 </h3>
                             </div>
-                            <p className="text-center text-gray-300 mb-8 text-sm">
+                            <p className="text-center text-gray-600 mb-8 text-sm">
                                 Advisory Council from Plaksha team and faculty to focus on
                                 industry partnerships, programming and academic initiatives
                             </p>
@@ -89,19 +89,19 @@ const AboutPage = () => {
                                                 className="rounded-full object-cover border-4 border-[#0d6d6e]"
                                             />
                                         </div>
-                                        <h4 className="font-semibold text-white text-sm mb-1">{member.name}</h4>
+                                        <h4 className="font-semibold text-gray-900 text-sm mb-1">{member.name}</h4>
                                     </div>
                                 ))}
                             </div>
                         </div>
                         {/* Design Team */}
                         <div className="mb-16">
-                            <div className="bg-[#3d4f5c] rounded-2xl p-6 mb-6">
+                            <div className="bg-[#0d6d6e] rounded-2xl p-6 mb-6">
                                 <h3 className="text-2xl font-semibold text-center text-white">
                                     Design Team
                                 </h3>
                             </div>
-                            <p className="text-center text-gray-300 mb-8 text-sm">
+                            <p className="text-center text-gray-600 mb-8 text-sm">
                                 The creative minds behind GWiST's visual identity and branding
                             </p>
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -112,11 +112,11 @@ const AboutPage = () => {
                                                 src={member.image}
                                                 alt={member.name}
                                                 fill
-                                                className="rounded-full object-cover border-4 border-[#3d4f5c]"
+                                                className="rounded-full object-cover border-4 border-[#0d6d6e]"
                                             />
                                         </div>
-                                        <h4 className="font-semibold text-white mb-1">{member.name}</h4>
-                                        <p className="text-sm text-gray-400">Designer</p>
+                                        <h4 className="font-semibold text-gray-900 mb-1">{member.name}</h4>
+                                        <p className="text-sm text-gray-500">Designer</p>
                                     </div>
                                 ))}
                             </div>
@@ -130,11 +130,11 @@ const AboutPage = () => {
                                 Club Members
                             </h3>
                         </div>
-                        <p className="text-center text-gray-300 mb-8 text-sm">
+                        <p className="text-center text-gray-600 mb-8 text-sm">
                             Active members participating in workshops, events, and community
                             building activities
                         </p>
-                        <div className="grid grid-cols-3 gap-6">
+                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                             {teamData.clubMembers.map((member, index) => (
                                 <div key={index} className="flex flex-col items-center text-center">
                                     <div className="relative w-24 h-24 mb-3">
@@ -145,7 +145,7 @@ const AboutPage = () => {
                                             className="rounded-full object-cover border-4 border-[#0d6d6e]"
                                         />
                                     </div>
-                                    <h4 className="font-semibold text-white text-sm">{member.name}</h4>
+                                    <h4 className="font-semibold text-gray-900 text-sm">{member.name}</h4>
                                 </div>
                             ))}
                         </div>

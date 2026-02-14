@@ -1,0 +1,40 @@
+[
+  {
+    "id": "better-with-money",
+    "category": "Finance & Society",
+    "title": "Who is Better with Money – Men OR Women?",
+    "description": "A deep dive into financial habits, decision-making, and outcomes across genders. This research explores whether men or women are more effective at managing money, saving, investing, and navigating financial risks.",
+    "features": [
+      "Comparative analysis of spending and saving patterns",
+      "Survey of investment strategies and risk tolerance",
+      "Insights from behavioral economics and psychology"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1523289333742-be1143f6b766?w=800&q=80",
+    "link": "research/better-with-money",
+    "detailPage": {
+      "overview": "This project investigates the age-old debate: are men or women better with money? By analyzing data from global financial surveys, interviewing experts, and reviewing the latest behavioral research, we uncover surprising trends and challenge common stereotypes. The study also highlights the impact of socialization, education, and access to financial resources on money management skills.",
+      "timeline": "Launched Q1 2026",
+      "team": "10+ Members",
+      "status": "Ongoing"
+    }
+  },
+  {
+    "id": "art-of-thinking-ai",
+    "category": "Technology & Society",
+    "title": "Before and After AI: Are we losing the Art of Thinking?",
+    "description": "Exploring how the rise of artificial intelligence is changing the way we think, solve problems, and make decisions. Are we becoming too reliant on machines, or is AI enhancing our cognitive abilities?",
+    "features": [
+      "Historical perspective on human problem-solving",
+      "Case studies of AI in education and work",
+      "Expert interviews on critical thinking in the digital age"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=800&q=80",
+    "link": "research/art-of-thinking-ai",
+    "detailPage": {
+      "overview": "This research examines the profound impact of AI on human cognition. We trace the evolution of thinking skills from the pre-digital era to the present, analyzing whether AI tools are making us less thoughtful or freeing us to focus on creativity and strategy. The project features interviews with educators, technologists, and psychologists, and offers recommendations for maintaining strong critical thinking skills in an AI-driven world.",
+      "timeline": "Launched Q4 2025",
+      "team": "8+ Members",
+      "status": "Active"
+    }
+  }
+]

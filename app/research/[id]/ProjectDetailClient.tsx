@@ -1,8 +1,7 @@
 "use client";
 
-import Footer from "@/components/footer";
+import Footer from "../../components/footer";
 import { ArrowLeft } from "lucide-react";
-import React from "react";
 import Link from "next/link";
 
 type Project = {

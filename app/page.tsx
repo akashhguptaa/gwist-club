@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from "../components/navbar";
-import HeroSection from "../components/heroSection";
-import MissionSection from "@/components/mission";
-import GoalSection from "@/components/goals";
-import Footer from "@/components/footer";
+import Navbar from "./components/navbar";
+import HeroSection from "./components/heroSection";
+import MissionSection from "./components/missionSection";
+import Goals from "./components/goals";
+import Footer from "./components/footer";
 
 const HomePage = () => {
   return (
@@ -13,7 +13,7 @@ const HomePage = () => {
         <HeroSection />
       </div>
       <MissionSection />
-      <GoalSection />
+      <Goals />
       <Footer />
     </div>
   );
