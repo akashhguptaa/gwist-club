@@ -80,10 +80,10 @@ const HeroSection = () => {
                 />
               </Link>
               <Link
-                href="/about"
+                href="/contact"
                 className="inline-flex items-center justify-center h-12 px-8 rounded-md text-sm font-medium border-2 border-gray-800 text-gray-800 hover:bg-gray-100 transition-colors"
               >
-                Learn More
+                Contact Us
               </Link>
             </div>
           </div>

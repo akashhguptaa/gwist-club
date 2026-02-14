@@ -78,7 +78,7 @@ const Footer = () => {
                 </a>
                 <div className="flex gap-4 mt-4">
                   <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/gwist.plaksha/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[#D6C3A9] hover:text-white transition-colors"
@@ -87,7 +87,7 @@ const Footer = () => {
                     <Instagram size={24} />
                   </a>
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/company/gwist-india/?originalSubdomain=in"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[#D6C3A9] hover:text-white transition-colors"
